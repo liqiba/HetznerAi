@@ -1,1 +1,30 @@
-
+{
+    "hcloud_token": "your_hetzner_api_token_here",
+    "telegram_bot_token": "your_telegram_bot_token_here",
+    "telegram_chat_id": "your_chat_id_here",
+    "traffic_limit_percent": 100,
+    "check_interval": 300,
+    "sleep_mode": {
+        "enable": true,
+        "shutdown_time": "23:50",
+        "startup_time": "08:00",
+        "rebuild_servers": [
+            {
+                "name": "my-server",
+                "server_type": "cx11",
+                "image": "ubuntu-22.04",
+                "location": "nbg1",
+                "ssh_keys": ["my-key"]
+            }
+        ]
+    },
+    "cloudflare": {
+        "enable": false,
+        "api_token": "your_cloudflare_token",
+        "zone_id": "your_zone_id",
+        "domain": "example.com",
+        "subdomain": "vps"
+    },
+    "notification_thresholds": [10, 20, 30, 40, 50, 60, 70, 80, 90],
+    "log_level": "INFO"
+}
