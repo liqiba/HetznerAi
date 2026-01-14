@@ -1,1 +1,14 @@
-
+version: '3.8'
+services:
+  hetzner-monitor:
+    build: .
+    container_name: hetzner-monitor
+    restart: unless-stopped
+    volumes:
+      - ./config.json:/app/config.json:ro
+      - ./logs:/var/log
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
