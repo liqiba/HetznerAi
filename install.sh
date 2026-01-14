@@ -31,9 +31,9 @@ cd $INSTALL_DIR
 
 # 下载必要文件
 echo "📥 下载项目文件..."
-curl -fsSL -o docker-compose.yml https://raw.githubusercontent.com/liuweiqiang0523/Hetzner-Automation/main/docker-compose.yml
-curl -fsSL -o config.json https://raw.githubusercontent.com/liuweiqiang0523/Hetzner-Automation/main/config.example.json
-curl -fsSL -o Dockerfile https://raw.githubusercontent.com/liuweiqiang0523/Hetzner-Automation/main/Dockerfile
+curl -fsSL -o docker-compose.yml https://raw.githubusercontent.com/liqiba/HetznerAi/main/docker-compose.yml
+curl -fsSL -o config.json https://raw.githubusercontent.com/liqiba/HetznerAi/main/config.example.json
+curl -fsSL -o Dockerfile https://raw.githubusercontent.com/liqiba/HetznerAi/main/Dockerfile
 
 # 创建配置目录
 mkdir -p $INSTALL_DIR/config
